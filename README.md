@@ -1,16 +1,15 @@
 # Claude Notify
 
-A Claude Code plugin for macOS: a banner when a session in the Claude desktop app finishes.
+Never miss a finished Claude session. When a session in the Claude desktop app finishes, a macOS
+banner tells you, and one click takes you straight back to it.
 
-The app puts finished tasks in Notification Centre without a banner, so they are easy to miss.
-This plugin shows one, with the session title and the first line of Claude's reply. Clicking it
-opens that session in the app.
+- **Jump right back in:** clicking the banner opens the exact session that finished, however many
+  you have running.
+- **See what happened at a glance:** the banner shows the session's title and the first line of
+  Claude's reply.
+- **Only when you're away:** while you're working in the Claude app, it stays quiet.
 
-- It stays quiet while Claude is the frontmost app.
-- It skips turns that end with a question, since the app shows its own banner for those.
-- Sessions in the terminal or an IDE get no banner.
-
-Not affiliated with Anthropic.
+A Claude Code plugin for the Claude desktop app on macOS. Not affiliated with Anthropic.
 
 ## Requirements
 
@@ -38,7 +37,8 @@ set Claude Notify to Persistent in System Settings > Notifications.
   into the plugin's data folder, `~/.claude/plugins/data/session-banners-session-banners/`, and
   rebuilds it when its sources change.
 - A `Stop` hook, [`stop-hook.py`](plugins/session-banners/scripts/stop-hook.py), launches the
-  helper with the banner text and the session's `claude://` link.
+  helper with the banner text and the session's `claude://` link. When a turn ends with a
+  question, it leaves the banner to the app, which shows its own for those.
 
 ## Uninstall
 
