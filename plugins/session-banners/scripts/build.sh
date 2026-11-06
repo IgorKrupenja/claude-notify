@@ -29,4 +29,6 @@ swiftc -O "$src/main.swift" -o "$build/Contents/MacOS/claude-notify" >&2
 codesign --force --sign - --deep "$build" >&2
 rm -rf "$app"
 mv "$build" "$app"
+# Without this macOS refuses the app's first request to post notifications
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f "$app"
 echo "$hash" >"$stamp"
