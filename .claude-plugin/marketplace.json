@@ -1,0 +1,14 @@
+{
+  "name": "session-banners",
+  "description": "macOS banners for Claude desktop app sessions",
+  "owner": {
+    "name": "Igor Krupenja"
+  },
+  "plugins": [
+    {
+      "name": "session-banners",
+      "source": "./plugins/session-banners",
+      "description": "macOS banners when a Claude desktop app session finishes, opening the session on click"
+    }
+  ]
+}

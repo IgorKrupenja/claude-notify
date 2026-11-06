@@ -1,0 +1,10 @@
+{
+  "name": "session-banners",
+  "version": "1.0.0",
+  "description": "macOS banners when a Claude desktop app session finishes, opening the session on click",
+  "author": {
+    "name": "Igor Krupenja"
+  },
+  "homepage": "https://github.com/IgorKrupenja/claude-notify",
+  "license": "MIT"
+}
